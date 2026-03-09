@@ -1,0 +1,122 @@
+/* Waybar style - Nord theme */
+* {
+  font-family: "JetbrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+window#waybar{
+  background: none;
+  color: #D8DEE9;  /* Nord6 */
+}
+
+#custom-launch_fuzzel,
+#custom-power_btn,
+#custom-lock_screen,
+#clock,
+#pulseaudio,
+#taskbar,
+#tray {
+  background: #3B4252;  /* Nord1 */
+  color: #D8DEE9;       /* Nord6 */
+  padding: 0.5em 0.75em;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  border: 1px solid #4C566A;  /* Nord3 */
+}
+
+#taskbar{
+  padding: 0;
+}
+
+#taskbar button{
+  padding: 0 0.5em;
+  border: 0;
+  color: #D8DEE9;
+  transition: .2s ease;
+}
+
+#taskbar button:hover{
+  background: #434C5E;  /* Nord2 */
+}
+
+#taskbar button.active{
+  background: #5E81AC;  /* Nord10 */
+  color: #2E3440;       /* Nord0 */
+}
+
+/* Status indicators with Nord accent colors */
+#pulseaudio {
+  color: #88C0D0;  /* Nord8 - cyan */
+}
+
+#pulseaudio.muted {
+  color: #BF616A;  /* Nord11 - red */
+}
+
+#battery {
+  color: #A3BE8C;  /* Nord14 - green */
+}
+
+#battery.warning {
+  color: #EBCB8B;  /* Nord13 - yellow */
+}
+
+#battery.critical {
+  color: #BF616A;  /* Nord11 - red */
+}
+
+#network {
+  color: #81A1C1;  /* Nord9 - blue */
+}
+
+#network.disconnected {
+  color: #D08770;  /* Nord12 - orange */
+}
+
+#clock {
+  color: #88C0D0;  /* Nord15 - purple */
+}
+
+/* Custom modules */
+#custom-launch_fuzzel {
+  background: #5E81AC;  /* Nord10 */
+  color: #2E3440;       /* Nord0 */
+  margin-left: 1em;
+  padding-right: 1.15em;
+  margin-right: 0.5em;
+}
+
+#custom-power_btn {
+  color: #88C0D0;       /* Nord0 */
+  margin-right: 1em;
+  padding-right: 1.15em;
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+#custom-lock_screen {
+  color: #88C0D0;       /* Nord0 */
+  border-radius: 0.5em 0 0 0.5em;
+  margin-left: 0.5em;
+}
+
+#tray {
+  margin-right: 0.5em;
+  padding-right: 0.9em;
+}
+
+#pulseaudio { 
+  border-radius: 0.5em;
+  margin-right: 0em;
+}
+
+/* Optional: Module hover effects */
+#custom-launch_fuzzel:hover,
+#custom-power_btn:hover,
+#custom-lock_screen:hover,
+#clock:hover,
+#pulseaudio:hover,
+#tray:hover {
+  background: #434C5E;  /* Nord2 */
+  transition: background 0.2s ease;
+}
