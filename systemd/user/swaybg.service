@@ -1,0 +1,8 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swaybg -m fill -o * -i "%h/Pictures/Wallpaper/wallhaven-wq6676_3440x1440.png"
+Restart=on-failure

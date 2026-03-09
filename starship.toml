@@ -1,0 +1,222 @@
+add_newline = true
+command_timeout = 2000
+
+format = """$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status$python
+$character
+"""
+
+[character]
+success_symbol = "╰─▷"
+error_symbol = "╰─▷"
+
+[env_var]
+symbol = "╭╴"
+variable = 'SHELL'
+format = "$symbol"  # Kept your format, color removed
+disabled = false
+
+[os]
+format = '[$symbol](#81A1C1) '  # Nord9
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
+[username]
+style_user = '#ECEFF4'           # Nord6 (was #FFFFFF)
+style_root = '#81A1C1'           # Nord9 (was #DAC2B1)
+format = '[//](#4C566A) [$user]($style) '  # Nord3 (was #515056)
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[//](#4C566A) [$hostname](#81A1C1) '  # Nord 9
+disabled = false
+
+[directory]
+truncation_length = 0
+truncation_symbol = '…/'
+home_symbol = '~'
+read_only = '  '
+format = '[//](#4C566A) [$path](#ECEFF4)[$read_only](#88C0D0) '  # Nord6, Nord8
+style = '#ECEFF4'  # Nord6 (was #FFFFFF)
+
+[git_branch]
+symbol = ' '
+format = '[//](#4C566A) [$symbol\[$branch\]](#88D0C0) '  # Nord9 (was #DAC2B1)
+style = '#81A1C1'  # Nord9 (was #DAC2B1)
+
+[git_status]
+disabled = false
+format = '[ $all_status$ahead_behind](#A3BE8C) '  # Nord14 (was #C4B0A5)
+style = '#A3BE8C'  # Nord14 (was #C4B0A5)
+conflicted = '🏳'
+up_to_date = '✓'
+untracked = ' '
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+staged = '[++($count)](#EBCB8B)'  # Nord13 (was #DAC2B1)
+renamed = '→ '
+deleted = ' '
+
+[git_commit]
+tag_symbol = '  '
+
+[kubernetes]
+format = '[//](#4C566A) [󱃾 $context($namespace)](#B48EAD) '  # Nord15 (was #C4B0A5)
+disabled = false
+
+[cmd_duration]
+format = '[$duration]($style) '
+min_time = 2000
+style = '#4C566A'  # Nord3 (was #8E8584)
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+format = "[$symbol$percentage](#4C566A) "  # Nord3 (was #8E8584)
+disabled = false
+
+# Disabled modules (unchanged)
+
+# Tools
+[nix_shell]
+symbol = " "
+
+[xmake]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+# Programming Language
+[python]
+symbol = '󰌠'
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
+format = '[//](#4C566A) [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )](#88C0D0) '  # Nord8 (was #DAC2B1)
+disabled = false
+
+[nim]
+symbol = "󰆥 "
+
+[ocaml]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[golang]
+symbol = " "
+
